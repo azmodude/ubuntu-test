@@ -4,11 +4,11 @@
 
 set -Eeuxo pipefail
 
-total_memory=$(lsmem | grep "^Total online memory" | \ 
+total_memory=$(lsmem | grep "^Total online memory" | \
     sed -r 's/^Total online memory:\s+([0-9]+G)/\1/')
 
 for i in 1 2 3 4; do
-    sudo sgdisk --delete=${i}
+    sudo sgdisk --delete=${i} ${DEV}
 done
 sudo partprobe && sleep 2
 
