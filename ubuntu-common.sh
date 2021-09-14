@@ -6,7 +6,7 @@ export DEVP="${DEV}$( if [[ "$DEV" =~ "nvme" ]]; then echo "p"; fi )"
 export DM="${DM}$( if [[ "$DM" =~ "nvme" ]]; then echo "p"; fi )"
 
 export USER="azmo"
-export OS_SIZE="100G"
+export LVM_SIZE="100G"
 #export SWAP_SIZE="16G"
 export LUKS_PASSWORD=test
 
